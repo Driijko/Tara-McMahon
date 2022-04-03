@@ -266,7 +266,7 @@ nav {
 
 nav ul {
   font-family: "Bellota Text", cursive;
-  font-size: calc(var(--w)/23);
+  font-size: calc(var(--w)/20);
   width: 100%;
   height: 100%;
   display: flex;
