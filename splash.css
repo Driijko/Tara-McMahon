@@ -130,6 +130,22 @@ body {
   ); */
 }
 
+/* GUTTERS -------------------------------------------------- */
+#gutter1 {
+  background-image: linear-gradient(
+    hsl(51, 100%, 50%),
+    hsl(40, 100%, 3%) 
+  );
+}
+
+#gutter2 {
+  background-image: linear-gradient(
+    hsl(250, 100%, 5%) 30%, 
+    hsl(40, 100%, 50%)
+  );
+  animation: fade-in 8s ease-in forwards;
+}
+
 @keyframes fade-in-blur {
   0% {
     opacity:0;
@@ -234,7 +250,7 @@ h1 img {
   font-size: calc(var(--w)/20);
   font-family: "Josefin Slab", serif;
   color: hsl(50, 100%, 95%);
-  top: 78%;
+  top: 82%;
   left: 18%;
   font-style: italic;
   font-weight: 300;
@@ -243,8 +259,8 @@ h1 img {
 /* NAVIGATION MENU -------------------------------------------------- */
 nav {
   width: 100%;
-  height: 25%;
-  top: 75%;
+  height: 26%;
+  top: 74%;
   background-color: hsl(250, 100%, 5%);
 }
 
@@ -259,6 +275,25 @@ nav ul {
   align-items: center;
   color: hsl(50, 100%, 80%);
   letter-spacing: calc(var(--w)/100);
+}
+
+nav a {
+  transition-property: transform, color;
+  transition-duration: 1.5s;
+  transition-timing-function: ease-out;
+}
+
+nav a:focus {
+  transform: scale(120%);
+  color: magenta;
+}
+
+/* HOVER ANIMATIONS ------------------------------------------------ */
+@media (hover:hover) {
+  nav a:hover {
+    transform: scale(120%);
+    color: magenta;
+  }
 }
 
 @media only screen and (orientation: landscape) {
