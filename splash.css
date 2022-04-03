@@ -117,20 +117,6 @@ body {
 
 /* CONTENT /////////////////////////////////////////////////// */
 /* GENERAL --------------------------------------------------- */
-.vp {
-  /* background-image: linear-gradient(
-    hsla(50, 100%, 50%, 0.5),
-    hsla(50, 100%, 50%, 0.5) 20%,
-    hsla(200, 100%, 90%, 1) 30%,
-    transparent 31%,
-    transparent 69%,
-    hsla(200, 100%, 90%, 1) 70%,
-    hsla(50, 100%, 50%, 0.5) 80%,    
-    hsla(50, 100%, 50%, 0.5) 100%    
-  ); */
-}
-
-/* GUTTERS -------------------------------------------------- */
 @keyframes fade-in-blur {
   0% {
     opacity:0;
@@ -146,8 +132,8 @@ body {
     hsl(51, 100%, 50%),
     hsl(40, 100%, 3%) 
   );
-  opacity: 0;
-  animation: fade-in-blur 6s 3s ease-in forwards;
+  /* opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards; */
 }
 
 #gutter2 {
@@ -155,19 +141,19 @@ body {
     hsl(250, 100%, 5%) 30%, 
     hsl(40, 100%, 50%)
   );
-  opacity: 0;
-  animation: fade-in-blur 6s 3s ease-in forwards;
+  /* opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards; */
 }
 
 
 
 .ur {
-  opacity: 0;
-  animation: fade-in-blur 6s 3s ease-in forwards;
+  /* opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards; */
 }
 
 /* LOGO SPLASH ---------------------------------------------- */
-@keyframes fade-in-out {
+@keyframes fade-in-out-special {
   0% {
     opacity:0;
   } 
@@ -189,12 +175,12 @@ body {
   align-items: center;
   background-image: linear-gradient(
     gold 5%,
-    transparent 25%,
-    transparent 75%,
+    hsl(50, 100%, 95%) 25%,
+    hsl(50, 100%, 95%) 75%,
     gold 95%
   );
   opacity: 0;
-  animation: fade-in-out 7s ease-out forwards;
+  /* animation: fade-in-out-special 7s ease-out forwards; */
   pointer-events: none;
 }
 
@@ -301,12 +287,61 @@ nav a:focus {
   }
 }
 
+/* BACKGROUNDS ------------------------------------------------ */
+@media only screen and (min-width: 601px) {
+  #header-background {
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/backgrounds/home-header-background-medium.jpg");
+    background-size: 100%;
+    background-position: 50% 20%;
+    background-repeat: no-repeat;
+    filter: contrast(50%);
+    z-index: -1;
+  }
+}
+
 @media only screen and (orientation: landscape) {
   /* GENERAL -------------------------------------------------------- */
   .vp {
     background-image: none;
   }
   .ur {
-    animation: fade-in-blur 9s 3s ease-out forwards;
+    /* animation: fade-in-blur 9s 3s ease-out forwards; */
+  }
+
+  /* OVERLAY ----------------------------------------------- */
+  @keyframes fade-in-out {
+    0% {opacity: 0;}
+    50% {opacity:1;}
+    100% {opacity:0;}
+  }
+
+  #overlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    pointer-events: none;
+    animation: fade-in-out 12s ease-in-out infinite;
+    background-image: linear-gradient(
+      90deg,
+      hsla(300, 100%, 50%, 0.1),
+      hsla(40, 100%, 50%, 0.4) 3%,
+      hsla(300, 100%, 50%, 0) 50%,
+      hsla(300, 100%, 60%, 0.3) 90%,
+      hsla(300, 100%, 40%, 0.5) 97%,
+      hsla(300, 100%, 50%, 0.1) 
+    );
+  }
+
+  /* HEADER ------------------------------------------------------ */
+  header {
+    height: 35%;
+  }
+
+  h1 img {
+    height: 100%;
+    width: 60%;
+    left: 20%;
   }
 }
