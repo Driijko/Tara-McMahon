@@ -106,7 +106,7 @@ body {
 }
 
 .ur {
-  position: relative;
+  position: absolute;
   width: var(--w);
   height: var(--h);
 }
@@ -116,8 +116,9 @@ body {
 }
 
 /* CONTENT /////////////////////////////////////////////////// */
+/* GENERAL --------------------------------------------------- */
 .vp {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     hsla(50, 100%, 50%, 0.5),
     hsla(50, 100%, 50%, 0.5) 20%,
     hsla(200, 100%, 90%, 1) 30%,
@@ -126,7 +127,22 @@ body {
     hsla(200, 100%, 90%, 1) 70%,
     hsla(50, 100%, 50%, 0.5) 80%,    
     hsla(50, 100%, 50%, 0.5) 100%    
-  );
+  ); */
+}
+
+@keyframes fade-in-blur {
+  0% {
+    opacity:0;
+    filter: blur(50px);
+  } 100% {
+    opacity:1;
+    filter: blur(0px);
+  }
+}
+
+.ur {
+  /* opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards; */
 }
 
 /* LOGO SPLASH ---------------------------------------------- */
@@ -157,11 +173,53 @@ body {
     gold 95%
   );
   opacity: 0;
-  animation: fade-in-out 9s ease-out forwards;
+  /* animation: fade-in-out 9s ease-out forwards; */
   pointer-events: none;
 }
 
 #logo img {
   width: 100%;
   object-fit: contain;
+}
+
+/* HEADER -------------------------------------------------------- */
+header {
+  width: 100%;
+  height: 30%;
+}
+
+#header-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/backgrounds/home-header-background.jpg");
+  background-size: 100%;
+  background-position: 50% 20%;
+  background-repeat: no-repeat;
+  filter: contrast(50%);
+  z-index: -1;
+}
+
+h1 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+h1 img {
+  object-fit: cover;
+  object-position: 10% 50%;
+  width: 120%;
+  height: 100%;
+  position: absolute;
+  left: -8%;
+}
+
+@media only screen and (orientation: landscape) {
+  /* GENERAL -------------------------------------------------------- */
+  .vp {
+    background-image: none;
+  }
+  .ur {
+    animation: fade-in-blur 9s 3s ease-out forwards;
+  }
 }
