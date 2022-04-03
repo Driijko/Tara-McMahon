@@ -116,8 +116,33 @@ body {
 }
 
 /* CONTENT /////////////////////////////////////////////////// */
-
 .vp {
+  background-image: linear-gradient(
+    hsla(50, 100%, 50%, 0.5),
+    hsla(50, 100%, 50%, 0.5) 20%,
+    hsla(200, 100%, 90%, 1) 30%,
+    transparent 31%,
+    transparent 69%,
+    hsla(200, 100%, 90%, 1) 70%,
+    hsla(50, 100%, 50%, 0.5) 80%,    
+    hsla(50, 100%, 50%, 0.5) 100%    
+  );
+}
+
+/* LOGO SPLASH ---------------------------------------------- */
+@keyframes fade-in-out {
+  0% {
+    opacity:0;
+  } 
+  50% {
+    opacity:1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 #logo-container {
@@ -125,6 +150,15 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  background-image: linear-gradient(
+    gold 5%,
+    transparent 25%,
+    transparent 75%,
+    gold 95%
+  );
+  opacity: 0;
+  animation: fade-in-out 9s ease-out forwards;
+  pointer-events: none;
 }
 
 #logo img {
