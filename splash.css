@@ -131,21 +131,6 @@ body {
 }
 
 /* GUTTERS -------------------------------------------------- */
-#gutter1 {
-  background-image: linear-gradient(
-    hsl(51, 100%, 50%),
-    hsl(40, 100%, 3%) 
-  );
-}
-
-#gutter2 {
-  background-image: linear-gradient(
-    hsl(250, 100%, 5%) 30%, 
-    hsl(40, 100%, 50%)
-  );
-  animation: fade-in 8s ease-in forwards;
-}
-
 @keyframes fade-in-blur {
   0% {
     opacity:0;
@@ -156,9 +141,29 @@ body {
   }
 }
 
+#gutter1 {
+  background-image: linear-gradient(
+    hsl(51, 100%, 50%),
+    hsl(40, 100%, 3%) 
+  );
+  opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards;
+}
+
+#gutter2 {
+  background-image: linear-gradient(
+    hsl(250, 100%, 5%) 30%, 
+    hsl(40, 100%, 50%)
+  );
+  opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards;
+}
+
+
+
 .ur {
-  /* opacity: 0;
-  animation: fade-in-blur 6s 3s ease-in forwards; */
+  opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards;
 }
 
 /* LOGO SPLASH ---------------------------------------------- */
@@ -189,7 +194,7 @@ body {
     gold 95%
   );
   opacity: 0;
-  /* animation: fade-in-out 9s ease-out forwards; */
+  animation: fade-in-out 7s ease-out forwards;
   pointer-events: none;
 }
 
