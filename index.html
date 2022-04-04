@@ -37,20 +37,28 @@
 </head>
 <body>
   <div class="vp">
-    <div id="gutter1"></div>
-    <div id="gutter2"></div>
+    <div id="gutter1" class="vg gutter"></div>
+    <div id="gutter2" class="hg gutter"></div>
+    <div id="gutter3" class="vg gutter"></div>
+    <div id="gutter4" class="hg gutter"></div>
+
     <div class="ur">
 
       <!-- HEADER ------------------------------------------------ -->
       <header class="abs">
         <div id="header-background" class="abs"></div>
         <h1 class="abs">
-          <img src="./assets/logos/tara-logo-text-small.png" alt="Logo of therapist and social worker Tara McMahon." />
+          <picture>
+            <source media="(max-width: 600px)" srcset="./assets/logos/tara-logo-text-small.png">
+            <source media="(max-width: 1920px)" srcset="./assets/logos/tara-logo-text-medium.png">
+            <source media="(min-width: 1921px)" srcset="./assets/logos/tara-logo-text-large.png">
+            <img src="./assets/logos/tara-logo-text-small.png" alt="Logo of therapist and social worker Tara McMahon.">
+          </picture>
         </h1>
       </header>
 
       <!-- NAVIGATION MENU ------------------------------ -->
-      <!-- <nav class="abs">
+      <nav class="abs">
         <ul>
           <li>
             <a href="./my-practice.html">My Practice</a>
@@ -62,15 +70,15 @@
             <a href="./resources.html">Resources</a>
           </li>
         </ul>
-      </nav> -->
+      </nav>
 
       <!-- PROFILE PIC & BLURB--------------------------------- -->
-      <!-- <div id="profile-pic-container" class="abs">
+      <div id="profile-pic-container" class="abs">
         <img id="profile-pic" class="abs" src="assets/images/standin-profile-pic.jpg" alt="Portrait photo of Tara McMahon." />
         <p id="profile-pic-blurb" class="abs">
           Toronto-based, specializing in<br/> trauma and awareness therapy.
         </p>
-      </div> -->
+      </div>
 
     </div>
 
@@ -79,7 +87,7 @@
       <!-- LOGO SPLASH -------------------------------------------- -->
     <div id="logo-container">
       <picture id="logo" class="abs">
-        <source media="(max-width: 1024px)" srcset="./assets/logos/tara-logo-small.jpg">
+        <source media="(max-width: 600px)" srcset="./assets/logos/tara-logo-small.jpg">
         <source media="(max-width: 1920px)" srcset="./assets/logos/tara-logo-medium.jpg">
         <source media="(min-width: 1921px)" srcset="./assets/logos/tara-logo-large.jpg">
         <img src="./assets/logos/tara-logo-small.jpg" alt="Logo of therapist and social worker Tara McMahon.">
