@@ -1,0 +1,216 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+  display: block;
+}
+a:focus {
+	outline: none;
+}
+
+/* CSS TOOLS //////////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Viewport Div */
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: var(--w);
+  height: var(--h);
+}
+
+.abs {
+  position: absolute;
+}
+
+/* CONTENT ///////////////////////////////////////////////////////// */
+/* LEAF 1: HEADER ///////////////////////////////////////////////// */
+/* BACKGROUND ------------------------------------------------------- */
+#leaf1 .ur {
+  background-image:  
+  linear-gradient(
+    hsla(0, 100%, 45%, 1),
+    hsla(0, 100%, 45%, 0.5) 15%,
+    hsla(0, 100%, 60%, 0.5) 30%,
+    hsla(0, 100%, 60%, 0.3) 70%,
+    hsla(10, 100%, 60%, 1)
+  ), url("./assets/backgrounds/my-practice-bkg1-portrait-small.jpg");
+  background-repeat: no-repeat;  
+}
+
+/* SITE HEADER --------------------------------------------------- */
+#header-background {
+  width: 100%;
+  height: 25%;
+  background-image: url("./assets/backgrounds/my-practice-header-bkg-small.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#home-link {
+  width: 100%;
+  height: 25%;
+}
+
+h1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/logos/tara-logo-text-small.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: -20% -100%;
+}
+
+/* NAVIGATION MENU ------------------------------------------- */
+nav {
+  width: 35%;
+  left: 65%;
+  height: 25%;
+  border-left: calc(var(--w)/150) solid hsla(0, 100%, 60%, 1);
+}
+
+nav ul {
+  width: 100%;
+  height: 100%;
+}
+
+nav li {
+  width: 100%;
+}
+
+nav a {
+  padding: 8%;
+  font-family: "Bellota Text", cursive;
+  font-size: calc(var(--w)/23);
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  color: hsl(50, 100%, 75%);
+  letter-spacing: calc(var(--w)/100);
+}
+
+/* PAGE HEADER --------------------------------------------------- */
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 100;
+  color: hsl(50, 100%, 85%);
+  font-size: calc(var(--w)/6.5);
+  left: 6%;
+  top: 50.5%;
+  /* opacity: 0; */
+  /* animation: fade-in 2s 7s ease-in forwards; */
+}
+
+/* LINES ----------------------------------------------- */
+#l1-line1 {
+  background-color: hsla(0, 100%, 60%, 0.2);
+  width: 100%;
+  top: 41%;
+  height: 20%;
+  transform-origin: 0% 50%;
+  /* animation: scale-h 7s 4s ease-out forwards;
+  opacity: 0; */
+}
+
+#l1-line2 {
+  background-color: hsla(0, 100%, 60%, 0.2);
+  width: 100%;
+  top: 50%;
+  height: 20%;
+  transform-origin: 100% 50%;
+  /* animation: scale-h 7s 4s ease-out forwards;
+  opacity: 0; */
+}
+
+/* INTERNAL PAGE LINK ----------------------------------------------- */
+#leaf1 .internal-page-link {
+  /* font-size: calc(var(--w)/10); */
+  border-radius: calc(var(--w)/30);
+  border: calc(var(--w)/250) solid hsla(50, 100%, 85%, 1);
+  /* color: hsla(50, 100%, 85%, 1);
+  padding: 1% 2%;
+  line-height: 1; */
+  left: 43%;
+  top: 85%;
+  width: 16%;
+  height: 8%;
+  /* opacity: 0;
+  animation: fade-in 2s 10s ease-in forwards; */
+}
