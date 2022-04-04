@@ -113,6 +113,7 @@ body {
     hsla(10, 100%, 60%, 1)
   ), url("./assets/backgrounds/my-practice-bkg1-portrait-small.jpg");
   background-repeat: no-repeat;  
+  background-size: cover;
 }
 
 /* SITE HEADER --------------------------------------------------- */
