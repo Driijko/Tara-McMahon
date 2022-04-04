@@ -103,6 +103,21 @@ body {
 /* CONTENT ///////////////////////////////////////////////////////// */
 /* LEAF 1: HEADER ///////////////////////////////////////////////// */
 /* BACKGROUND ------------------------------------------------------- */
+@keyframes fade-in {from{opacity:0;}to{opacity:1;}}
+
+#leaf1 {
+  background-image:  
+  linear-gradient(
+    hsl(0, 100%, 40%),
+    hsl(0, 100%, 45%) 15%,
+    hsl(50, 100%, 60%) 30%,
+    hsl(30, 100%, 50%) 70%,
+    hsl(10, 100%, 60%)
+  );
+  /* opacity: 0;
+  animation: fade-in 3s ease-in forwards; */
+}
+
 #leaf1 .ur {
   background-image:  
   linear-gradient(
@@ -128,6 +143,13 @@ body {
 #home-link {
   width: 100%;
   height: 25%;
+  transition-property: background-color;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+
+#home-link:focus, #home-link:hover {
+  background-color: hsl(0, 100%, 40%);
 }
 
 h1 {
@@ -137,6 +159,11 @@ h1 {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: -20% -100%;
+  transition: transform 2s ease-out;
+}
+
+#home-link:focus h1, #home-link:hover h1 {
+  transform: scale(115%) translate(7%, 10%);
 }
 
 /* NAVIGATION MENU ------------------------------------------- */
@@ -167,6 +194,16 @@ nav a {
   letter-spacing: calc(var(--w)/100);
 }
 
+nav a:hover, nav a:focus {
+  color: black;
+  background-image: linear-gradient(
+    90deg, 
+    hsl(00, 100%, 60%), 
+    hsla(0, 0%, 0%, 0) 
+  );
+  font-weight: 700;
+}
+
 /* PAGE HEADER --------------------------------------------------- */
 h2 {
   font-family: "Montserrat", sans-serif;
@@ -180,13 +217,18 @@ h2 {
 }
 
 /* LINES ----------------------------------------------- */
+@keyframes scale-h {
+  from{transform:scaleX(0);opacity:1;} 
+  to{transform:scaleX(1);opacity:1;}
+}
+
 #l1-line1 {
   background-color: hsla(0, 100%, 60%, 0.2);
   width: 100%;
   top: 41%;
   height: 20%;
   transform-origin: 0% 50%;
-  /* animation: scale-h 7s 4s ease-out forwards;
+  /* animation: scale-h 5s 0s ease-out forwards;
   opacity: 0; */
 }
 
@@ -196,22 +238,51 @@ h2 {
   top: 50%;
   height: 20%;
   transform-origin: 100% 50%;
-  /* animation: scale-h 7s 4s ease-out forwards;
+  /* animation: scale-h 5s 0s ease-out forwards;
   opacity: 0; */
 }
 
 /* INTERNAL PAGE LINK ----------------------------------------------- */
 #leaf1 .internal-page-link {
-  /* font-size: calc(var(--w)/10); */
   border-radius: calc(var(--w)/30);
-  border: calc(var(--w)/250) solid hsla(50, 100%, 85%, 1);
-  /* color: hsla(50, 100%, 85%, 1);
-  padding: 1% 2%;
-  line-height: 1; */
+  border: calc(var(--w)/250) solid hsl(50, 100%, 85%);
   left: 43%;
   top: 85%;
   width: 16%;
   height: 8%;
+  transition-property: border-radius, background-color, border-color;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
   /* opacity: 0;
   animation: fade-in 2s 10s ease-in forwards; */
+}
+
+#leaf1 .internal-page-link:focus-visible {
+  background-color: red;
+  border-radius: calc(var(--w)/100);
+  border-color:hsl(50, 100%, 70%);
+}
+
+#leaf1 .internal-page-link path {
+  transition-property: stroke;
+  transition-timing-function: ease-out;
+  transition-duration: 2s;
+}
+
+#leaf1 .internal-page-link:focus-visible path {
+  stroke:hsl(50, 100%, 70%);
+}
+
+/* HOVER ANIMATIONS ------------------------------------------ */
+@media (hover:hover) {
+
+  #leaf1 .internal-page-link:hover {
+    background-color: red;
+    border-radius: calc(var(--w)/100);
+    border-color:hsl(50, 100%, 70%);
+  }
+
+  #leaf1 .internal-page-link:hover path {
+    stroke:hsl(50, 100%, 70%);
+  }
 }
