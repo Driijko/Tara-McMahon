@@ -167,8 +167,8 @@ body {
 }
 
 .ur, .gutter {
-  /* opacity: 0;
-  animation: fade-in-blur 6s 3s ease-in forwards; */
+  opacity: 0;
+  animation: fade-in-blur 6s 3s ease-in forwards;
 }
 
 /* LOGO SPLASH ---------------------------------------------- */
@@ -199,7 +199,7 @@ body {
     gold 95%
   );
   opacity: 0;
-  /* animation: fade-in-out-special 7s ease-out forwards; */
+  animation: fade-in-out-special 7s ease-out forwards;
   pointer-events: none;
 }
 
