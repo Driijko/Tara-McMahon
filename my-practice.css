@@ -372,13 +372,25 @@ nav a:hover, nav a:focus {
 
 /* LEAF 2: MAIN ////////////////////////////////////////////////////// */
 #leaf1 {
-  /* display: none; */
+  display: none;
 }
 
+/* BACKGROUNDS ---------------------------------------- */
+
 #leaf2 {
-  background-image: url("./assets/backgrounds/my-practice-bkg2.jpg");
+  background-image: url("./assets/backgrounds/my-practice-bkg2-small.jpg");
   background-size: cover;
   position: relative;
+}
+@media only screen and (min-width:601px) and (max-width:1920px) {
+  #leaf2 {
+    background-image: url("./assets/backgrounds/my-practice-bkg2-medium.jpg");
+  }
+}
+@media only screen and (min-width:1921px) {
+  #leaf2 {
+    background-image: url("./assets/backgrounds/my-practice-bkg2-large.jpg");
+  }
 }
 
 #leaf2 .ur {
@@ -388,6 +400,7 @@ nav a:hover, nav a:focus {
   /* border: 4px solid white; */
 }
 
+/* GUTTERS --------------------------------------------------- */
 .gutter svg {
   width: 100%;
   height: 100%;
@@ -397,12 +410,14 @@ nav a:hover, nav a:focus {
 
 .gutter1 {
   border-bottom: calc(var(--w)/50) solid hsl(0, 100%, 55%);
-  background-color: hsl(0, 100%, 30%); 
+  background-color: hsl(0, 100%, 30%);
+
 }
 
 .gutter3 {
   border-top: calc(var(--w)/50) solid hsl(0, 100%, 55%);
   background-color: hsl(0, 100%, 30%);
+
 }
 
 /* INTERNAL PAGE LINK ------------------------------------------- */
@@ -420,6 +435,11 @@ nav a:hover, nav a:focus {
 
 #leaf2 .internal-page-link:focus-visible {
   background-color: hsl(0, 100%, 55%);
+}
+
+#leaf2 .internal-page-link svg {
+  width: 100%;
+  height: 100%;
 }
 
 #leaf2 .internal-page-link path {
@@ -449,12 +469,10 @@ article {
   width: 94%;
   height: 100%;
   left: 3%;
-  /* top: 7%; */
   overflow: scroll;
-  /* background-color: hsl(180, 100%, 80%);
-  border-radius: calc(var(--w)/30);
-  border: calc(var(--w)/50) solid hsl(180, 100%, 50%); */
-
+  font-size: calc(var(--w)/20);
+  font-family: "Montserrat";
+  cursor: n-resize;
 }
 
 #article-layout-adjuster1 {
@@ -468,14 +486,11 @@ article {
 }
 
 p, #leaf2 h2 {
-  font-family: "Montserrat";
   padding: 5%;
   line-height: 1.5;
   background-color: hsla(50, 100%, 90%, 0.6);
   border-radius: calc(var(--w)/20);
   margin: 5% 1%;
-  font-size: calc(var(--w)/20);
-
 }
 
 #leaf2 h2 {
@@ -591,4 +606,54 @@ p, #leaf2 h2 {
     border-radius: 0;
     background-color: hsl(220, 100%, 20%);
   } 
+
+  /* LEAF 2 //////////////////////////////////////////////////// */
+  /* GUTTERS ----------------------------------------------- */
+  .gutter2 g, .gutter4 g {
+    transform: scale(200%);
+    stroke: hsl(0, 100%, 60%);
+    fill: hsla(50, 100%, 80%, 0.3);
+  }
+
+  .gutter2 g {
+    transform-origin: 100% 25%;
+  }
+
+  .gutter4 g {
+    transform-origin: 0% 25%;
+  }
+
+  .gutter1, .gutter3 {
+    background-color: hsla(0, 100%, 60%, 0.5);
+    border-width: calc(var(--w)/200);
+    /* border-color: hsl(50, 100%, 85%); */
+  }
+
+  /* INTERNAL PAGE-LINK ----------------------------------------- */
+  #leaf2 .internal-page-link {
+    width: 33%;
+  }
+
+  /* ARTICLE ------------------------------------------------------ */
+  article {
+    padding-bottom: 10%;
+    width: 60%;
+    left: 20%;
+    font-size: calc(var(--w)/50);
+  }
+  
+  #article-layout-adjuster1 {
+    display: var(--hg);
+    height: 10%;
+  }
+  
+  #article-layout-adjuster2 {
+    display: var(--vg);
+    height: calc(50px / var(--gh));
+  }
+  
+  p, #leaf2 h2 {
+    border-radius: calc(var(--w)/50);
+  }
+
 }
