@@ -41,20 +41,35 @@ body {
   align-items: center;
 }
 
-#gutter1, #gutter2 {
+.gutter {
   position: absolute;
   width: var(--gw);
   height: var(--gh);
 }
 
-#gutter1 {
-  left: 0;
+.vg {
+  display: var(--vg);
+
+}
+
+.hg {
+  display: var(--hg);
+}
+
+.gutter1 {
   top: 0;
 }
 
-#gutter2 {
+.gutter2 {
   right: 0;
+}
+
+.gutter3 {
   bottom: 0;
+}
+
+.gutter4 {
+  left: 0;
 }
 
 /* Main Scrolling Container */
