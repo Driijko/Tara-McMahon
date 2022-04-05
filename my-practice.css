@@ -77,6 +77,17 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+#msc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
 /* Viewport Div */
 .vp {
   width: 100%;
@@ -93,7 +104,7 @@ body {
 .gutter {
   position: absolute;
   width: var(--gw);
-  height: var(--gh);
+  height: calc(var(--gh) * 1px);
 }
 
 .vg {
@@ -279,7 +290,7 @@ nav a:hover, nav a:focus {
 }
 
 /* PAGE HEADER --------------------------------------------------- */
-h2 {
+#leaf1 h2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 100;
   color: hsl(50, 100%, 85%);
@@ -361,11 +372,13 @@ h2 {
 
 /* LEAF 2: MAIN ////////////////////////////////////////////////////// */
 #leaf1 {
-  display: none;
+  /* display: none; */
 }
 
 #leaf2 {
-  background-color: hsl(0, 100%, 50%);
+  background-image: url("./assets/backgrounds/my-practice-bkg2.jpg");
+  background-size: cover;
+  position: relative;
 }
 
 #leaf2 .ur {
@@ -382,34 +395,97 @@ h2 {
 
 }
 
+.gutter1 {
+  border-bottom: calc(var(--w)/50) solid hsl(0, 100%, 55%);
+  background-color: hsl(0, 100%, 30%); 
+}
+
+.gutter3 {
+  border-top: calc(var(--w)/50) solid hsl(0, 100%, 55%);
+  background-color: hsl(0, 100%, 30%);
+}
+
 /* INTERNAL PAGE LINK ------------------------------------------- */
 #leaf2 .internal-page-link {
-  border: calc(var(--w)/50) solid hsl(0, 100%, 30%);
+  background-color: hsl(0, 100%, 45%);
+  border-top: none;
   width: 100%;
   height: 6%;
+  top: 0%;
   border-radius: 0% 0% calc(var(--w)/20)  calc(var(--w)/20);
+  transition-property: background-color;
+  transition-timing-function: ease-out;
+  transition-duration: 1s;
+}
+
+#leaf2 .internal-page-link:focus-visible {
+  background-color: hsl(0, 100%, 55%);
+}
+
+#leaf2 .internal-page-link path {
+  transition-property: stroke, fill;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+}
+
+#leaf2 .internal-page-link:focus-visible path {
+  fill: hsl(50, 100%, 85%);
+  stroke: hsl(50, 100%, 85%);
+}
+
+@media (hover:hover) {
+  #leaf2 .internal-page-link:hover {
+    background-color: hsl(0, 100%, 55%);
+  }
+  #leaf2 .internal-page-link:hover path {
+    fill: hsl(50, 100%, 85%);
+    stroke: hsl(50, 100%, 85%);
+  }
 }
 
 /* ARTICLE ------------------------------------------------------ */
 article {
-  /* border: 4px solid green; */
-  width: 100%;
-  height: 93%;
-  top: 7%;
+  padding-bottom: 50%;
+  width: 94%;
+  height: 100%;
+  left: 3%;
+  /* top: 7%; */
   overflow: scroll;
-  font-family: "Montserrat";
-  font-size: calc(var(--w)/20);
-  background-color: hsl(180, 100%, 80%);
+  /* background-color: hsl(180, 100%, 80%);
   border-radius: calc(var(--w)/30);
-  border: calc(var(--w)/50) solid hsl(180, 100%, 50%);
+  border: calc(var(--w)/50) solid hsl(180, 100%, 50%); */
+
 }
 
-p {
+#article-layout-adjuster1 {
+  display: var(--hg);
+  height: 10%;
+}
+
+#article-layout-adjuster2 {
+  display: var(--vg);
+  height: calc(50px / var(--gh));
+}
+
+p, #leaf2 h2 {
+  font-family: "Montserrat";
   padding: 5%;
   line-height: 1.5;
-  background-color: hsl(50, 100%, 90%);
+  background-color: hsla(50, 100%, 90%, 0.6);
   border-radius: calc(var(--w)/20);
   margin: 5% 1%;
+  font-size: calc(var(--w)/20);
+
+}
+
+#leaf2 h2 {
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#sign-off {
+  text-align: center;
 }
 
 /* LANDSCAPE LAYOUT //////////////////////////////////////////////// */
@@ -478,7 +554,7 @@ p {
   }
 
   /* PAGE HEADER ---------------------------------------- */
-  h2 {
+  #leaf1 h2 {
     font-size: calc(var(--w)/12);
     top: 46%;
     left: 25%;
