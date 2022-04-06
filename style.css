@@ -43,8 +43,8 @@ body {
 
 .gutter {
   position: absolute;
-  width: var(--gw);
-  height: var(--gh);
+  width: calc(var(--gw) * 1px);
+  height: calc(var(--gh) * 1px);
 }
 
 .vg {
@@ -56,19 +56,19 @@ body {
   display: var(--hg);
 }
 
-.gutter1 {
+.gutter-top {
   top: 0;
 }
 
-.gutter2 {
+.gutter-right {
   right: 0;
 }
 
-.gutter3 {
+.gutter-bottom {
   bottom: 0;
 }
 
-.gutter4 {
+.gutter-left {
   left: 0;
 }
 
@@ -99,8 +99,8 @@ body {
 
 .ur {
   position: relative;
-  width: var(--w);
-  height: var(--h);
+  width: calc(var(--w) * 1px);
+  height: calc(var(--h) * 1px);
 }
 
 .abs {
