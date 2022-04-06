@@ -137,7 +137,7 @@ body {
 }
 
 /* CONTENT //////////////////////////////////////////////////// */
-/* GENERAL ---------------------------------------------- */
+/* ANIMATIONS -------------------------------------------- */
 @keyframes dim1 {
   0% {
     opacity: 0;
@@ -154,6 +154,7 @@ body {
 }
 @keyframes fade-in {from{opacity: 0;} to{opacity:1;}}
 
+/* BACKGROUNDS ---------------------------------------------- */
 #vp-bkg {
   width: 100%;
   height: 100%;
@@ -162,7 +163,33 @@ body {
   background-size: cover;
   opacity: 0;
   animation: dim1 10s ease-out forwards;
-  filter: hue-rotate(40deg) brightness(500%);
+}
+
+#header-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/backgrounds/contact-header-bkg-small.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+main {
+  width: 100%;
+  top: 25%;
+  height: 75%;
+  background-image: url("assets/backgrounds/contact-bkg1.png");
+  background-size: 67%;
+  opacity: 0; 
+  animation: fade-in 3s 2s ease-in forwards;
+}
+
+#background1 {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/backgrounds/contact-bkg2.jpg");
+  opacity: 0.7;
+  background-size: 110%;
+  background-position: 100% 100%;
 }
 
 
@@ -190,14 +217,6 @@ header {
   animation: fade-in 3s 2s ease-in forwards;
 }
 
-#header-background {
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/backgrounds/contact-header-bkg.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
 #home-link {
   width: 100%;
   height: 100%;
@@ -205,6 +224,14 @@ header {
   background-size: 70%;
   background-repeat: no-repeat;
   background-position: -20% 50%;
+  transition-property: background-color, background-size;
+  transition-duration: 2s;
+  transition-timing-function: ease-out; 
+}
+
+#home-link:focus, #home-link:hover {
+  background-color: hsl(20, 100%, 50%);
+  background-size: 77%;
 }
 
 #rec1 {
@@ -219,7 +246,6 @@ nav {
   width: 35%;
   left: 65%;
   height: 100%;
-
   border-left: calc(var(--wpx)/50) solid hsla(50, 100%, 60%, 0.5);
 }
 
@@ -253,29 +279,21 @@ nav a {
   color: hsl(50, 100%, 75%);
   letter-spacing: calc(var(--wpx)/100);
   line-height: 1.2;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-property: color;
 }
 
-/* MAIN ------------------------------------------- */
-main {
-  width: 100%;
-  top: 25%;
-  height: 75%;
-  background-image: url("assets/backgrounds/contact-bkg1.png");
-  background-size: 67%;
-  opacity: 0; 
-  animation: fade-in 3s 2s ease-in forwards;
-
-  /* animation: fade-in 5s ease-in forwards; */
+nav a:hover, nav a:focus {
+  color: black;
+  background-image: linear-gradient( 
+    90deg,
+    hsl(30, 100%, 60%), 
+    hsla(0, 0%, 0%, 0) 
+  );
+  font-weight: 700;
 }
 
-#background1 {
-  width: 100%;
-  height: 100%;
-  background-image: url("./assets/backgrounds/contact-bkg2.jpg");
-  opacity: 0.7;
-  background-size: 110%;
-  background-position: 100% 100%;
-}
 
 /* PARAGRAPHS ----------------------------------------------- */
 p {
@@ -298,4 +316,73 @@ p {
   top: 50%;
   left: 8%;
   animation: fade-in 2s 7s ease-in forwards;
+}
+
+@media only screen and (orientation: landscape) {
+
+  #vp-bkg {
+    background-image: url("./assets/backgrounds/contact-bkg3.jpg");
+  }
+
+  /* HEADER ----------------------------------------- */
+  #home-link {
+    background-size: 29%;
+    background-position: 0% 50%;
+  }
+  #home-link:focus, #home-link:hover {
+    background-size: 40%;
+  }
+
+  /* NAVIGATION MENU ------------------------------ */
+  nav {
+    width: 60%;
+    left: 40%;
+    border-left-width: calc(var(--wpx)/100);
+    border-left-color: hsla(0, 100%, 50%, 0.7);
+  }
+
+  nav ul {
+    height: 100%;
+    top: 0%;
+    display: flex;
+    flex-direction: row;
+  }
+
+  #li1, #li2 {
+    height: 100%;
+  }
+
+  nav a {
+    height: 100%;
+    font-size: calc(var(--wpx)/40);
+    transition-duration: 1.5s, 2s;
+    transition-timing-function: ease-out;
+    transition-property: font-size, color;
+  }
+
+  /* MAIN -------------------------------------------------------- */
+  main {
+    background-size: 31.95%;
+  }
+
+  #background1 {
+    background-size: 100%;
+    background-position: 50% 8%;
+    filter:brightness(50%);
+  }
+
+  /* PARAGRAPHS --------------------------------------------------- */
+  p {
+    font-size: calc(var(--wpx)/35);
+    line-height: 1.5;
+    letter-spacing: calc(var(--wpx)/700);
+  }
+
+  #p1 {
+    top: 25%;
+  }
+
+  #p2 {
+    top: 55%;
+  }
 }
