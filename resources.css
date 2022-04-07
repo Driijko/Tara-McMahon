@@ -1,0 +1,306 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+  display: block;
+}
+a:focus {
+	outline: none;
+}
+
+/* CSS TOOLS ////////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: calc(var(--w) * 1px);
+  height: calc(var(--h) * 1px);
+}
+
+.abs {
+  position: absolute;
+}
+
+/* CONTENT ///////////////////////////////////////////////// */
+.vp {
+  background-image: linear-gradient(
+    hsl(150, 100%, 70%),
+    hsl(150, 100%, 1%)
+  );
+}
+/* BACKGROUNDS ------------------------------------------------ */
+#header-background {
+  width: 100%;
+  height: 100%;
+  background-size: 100%;
+  background-image: url("./assets/backgrounds/resources-header-bkg.jpg");
+}
+
+/* SITE HEADER ---------------------------------------------- */
+.ur {
+  /* border: 1px solid blue; */
+}
+
+header {
+  width: 100%;
+  height: 25%;
+
+  /* opacity: 0;
+  animation: fade-in 3s 2s ease-in forwards; */
+}
+
+#home-link {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/logos/tara-logo-text-small.png");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: -20% 50%;
+  transition-property: background-color, background-size;
+  transition-duration: 2s;
+  transition-timing-function: ease-out; 
+}
+
+#rec1 {
+  background-color: hsla(150, 100%, 30%, 0.8);
+  width: 100%;
+  height: 60%;
+  top: 20%;
+}
+
+#home-link:focus, #home-link:hover {
+  background-color: hsl(150, 100%, 30%);
+  background-size: 77%;
+}
+
+/* NAVIGATION MENU --------------------------------- */
+nav {
+  width: 35%;
+  left: 65%;
+  height: 100%;
+  border-left: calc(var(--wpx)/50) solid hsl(50, 100%, 60%);
+}
+
+nav ul {
+  top: 20%;
+  width: 100%;
+  height: 60%;
+}
+
+nav li {
+  width: 100%;
+}
+
+#li1 {
+  height: 55%;
+}
+
+#li2 {
+  height: 45%;
+}
+
+nav a {
+  font-family: "Bellota Text", cursive;
+  font-size: calc(var(--wpx)/25);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: hsl(50, 100%, 75%);
+  letter-spacing: calc(var(--wpx)/100);
+  line-height: 1.2;
+  transition-duration: 2s;
+  transition-timing-function: ease-out;
+  transition-property: color;
+}
+
+nav a:hover, nav a:focus {
+  color: black;
+  background-image: linear-gradient( 
+    90deg,
+    hsl(50, 100%, 60%), 
+    hsla(0, 0%, 0%, 0) 
+  );
+  font-weight: 700;
+}
+
+/* MAIN ---------------------------------------------- */
+main {
+  width: 100%;
+  height: 75%;
+  top: 25%;
+}
+
+#main-background {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/backgrounds/resources-bkg1.jpg");
+  background-size: 100%;
+  filter: brightness(40%);
+}
+
+#p1, #p2 {
+  font-family: "Montserrat", sans-serif;
+  color: hsl(50, 100%, 85%);
+  font-size: calc(var(--wpx)/30);
+  width: 90%;
+  left: 5%;
+  line-height: 1.5;
+}
+
+#p1 {
+  top: 1%;
+}
+
+#p2 {
+  top: 88%;
+}
+
+#hotline-list-section {
+  background-color: hsla(150, 100%, 0%, 0.3);
+  top: 15%;
+  width: 100%;
+  height: 70%;
+  border-top: calc(var(--wpx)/300) solid hsl(50, 100%, 85%);
+  border-bottom: calc(var(--wpx)/300) solid hsl(50, 100%, 85%);
+}
+
+#overlay {
+  pointer-events: none;
+  width: 100%;
+  top: 5%;
+  height: 90%;
+  background-image: linear-gradient(
+    black,
+    black 3%,
+    transparent 25%,
+    transparent 75%,
+    black 97%,
+    black
+  );
+}
+
+.arrow-icon {
+  width: 100%;
+  height: 5%;
+  position: absolute;
+  background-color: black;
+}
+
+#up-arrow-icon {
+  border-bottom: calc(var(--wpx)/300) solid hsl(50, 100%, 85%);
+}
+
+#down-arrow-icon {
+  bottom: 0%;
+  border-top: calc(var(--wpx)/300) solid hsl(50, 100%, 85%);
+}
+
+#hotline-list {
+  width: 100%;
+  top: 5%;
+  height: 90%;
+  font-family: "Montserrat", sans-serif;
+  overflow: scroll;
+}
+
+#hotline-list li {
+  width: 100%;
+  height: 60%;
+  padding: 5%;
+  color: hsl(50, 100%, 85%);
+  font-size: calc(var(--wpx)/20);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.organization {
+  color: hsl(50, 100%, 85%);
+  font-size: calc(var(--wpx)/20);
+  line-height: 1.5;
+}
+
+.phone-number, .tty {
+  text-align: right;
+}
