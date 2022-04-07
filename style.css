@@ -116,6 +116,10 @@ i {
   display: none;
 }
 
+.inline-link {
+  display: inline;
+  text-decoration: underline;
+}
 
 .row {
   width: 100%;
