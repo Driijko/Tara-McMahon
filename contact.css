@@ -159,7 +159,7 @@ body {
   width: 100%;
   height: 100%;
   position: absolute;
-  background-image: url("./assets/backgrounds/contact-bkg2.jpg");
+  /* background-image: url("./assets/backgrounds/contact-bkg2.jpg"); */
   background-size: cover;
   opacity: 0;
   animation: dim1 10s ease-out forwards;
@@ -168,7 +168,7 @@ body {
 #header-background {
   width: 100%;
   height: 100%;
-  background-image: url("./assets/backgrounds/contact-header-bkg-small.jpg");
+  /* background-image: url("./assets/backgrounds/contact-header-bkg-small.jpg"); */
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -186,10 +186,59 @@ main {
 #background1 {
   width: 100%;
   height: 100%;
-  background-image: url("./assets/backgrounds/contact-bkg2.jpg");
+  /* background-image: url("./assets/backgrounds/contact-bkg2.jpg"); */
   opacity: 0.7;
   background-size: 110%;
   background-position: 100% 100%;
+}
+@media only screen and (max-width: 600px) {
+  #vp-bkg {
+    background-image: url("./assets/backgrounds/contact-bkg2-small.jpg");
+  }
+  
+  #header-background {
+    background-image: url("./assets/backgrounds/contact-header-bkg-small.jpg");
+  }
+  
+  main {
+    background-image: url("assets/backgrounds/contact-bkg1-small.jpg");
+  }
+  
+  #background1 {
+    background-image: url("./assets/backgrounds/contact-bkg2-small.jpg");
+  }   
+}
+@media only screen and (min-width: 601px) and (max-width:1920px) {
+  #vp-bkg {
+    background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
+  }
+  
+  #header-background {
+    background-image: url("./assets/backgrounds/contact-header-bkg-medium.jpg");
+  }
+  
+  main {
+    background-image: url("assets/backgrounds/contact-bkg1-medium.jpg");
+  }
+  
+  #background1 {
+    background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
+  }  
+}
+
+@media only screen and (min-width: 1921px) { 
+  #header-background {
+    background-image: url("./assets/backgrounds/contact-header-bkg-large.jpg");
+  }
+  #vp-bkg {
+    background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
+  } 
+  main {
+    background-image: url("assets/backgrounds/contact-bkg1-large.jpg");
+  }
+  #background1 {
+    background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
+  }  
 }
 
 
@@ -319,9 +368,21 @@ p {
 }
 
 @media only screen and (orientation: landscape) {
-
-  #vp-bkg {
-    background-image: url("./assets/backgrounds/contact-bkg3.jpg");
+  @media only screen and (max-width: 600px) {
+    #vp-bkg {
+      background-image: url("./assets/backgrounds/contact-bkg3-small.jpg");
+    } 
+  }
+  @media only screen and (min-width: 601px) and (max-width:1920px) {
+    #vp-bkg {
+      background-image: url("./assets/backgrounds/contact-bkg-medium.jpg");
+    } 
+  }
+  
+  @media only screen and (min-width: 1921px) { 
+    #vp-bkg {
+      background-image: url("./assets/backgrounds/contact-bkg3-large.jpg");
+    } 
   }
 
   /* HEADER ----------------------------------------- */

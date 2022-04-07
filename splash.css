@@ -314,6 +314,9 @@ nav a:focus {
 }
 
 @media only screen and (orientation: landscape) {
+  .desktop {
+    display: initial;
+  }
   /* GENERAL -------------------------------------------------------- */
   .vp {
     background-image: none;
@@ -412,7 +415,7 @@ nav a:focus {
     transition-property: transform, color;
   }
 
-  nav a:focus {
+  nav a:focus, nav a:hover {
     color: black;
     background-image: linear-gradient(
       90deg, 
@@ -423,16 +426,24 @@ nav a:focus {
     font-weight: bold;
   }
 
-  @media (hover:hover) {
-    nav a:hover {
-      color: black;
-      background-image: linear-gradient(
-        90deg, 
-        hsl(50, 100%, 80%), 
-        hsla(0, 0%, 0%, 0) 
-      );
-      transform: scale(120%);
-      font-weight: bold;
+    /* WEB-DESIGN CREDITS LINK ------------------------------------- */
+    #web-design-credits-link {
+      left: 70%;
+      top: 89.9%;
+      width: 30%;
+      height: 10.1%;
+      background-color: hsl(250, 100%, 5%);
+      color: hsl(300, 100%, 30%);
+      font-family: "Josefin Slab", serif;
+      font-size: calc(var(--w)/70);
+      padding-top: 4%;
+      padding-left: 4%;
+      transition: color 1s ease-in;
     }
-  }
+  
+    #web-design-credits-link:hover, #web-design-credits-link:focus {
+      color: magenta;
+      background-color: hsl(250, 100%, 10%);
+    }
+
 }

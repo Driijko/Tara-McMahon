@@ -1,0 +1,406 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+  display: block;
+}
+a:focus {
+	outline: none;
+}
+
+/* CSS TOOLS ////////////////////////////////////////// */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  height: 100%;
+  -ms-overflow-style: none;
+  overflow: hidden;
+  overflow: -moz-scrollbars-none; 
+}
+
+/* Chrome and Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  /* Prevent address bar from disappearing on mobile. */
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+#fixed-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gutter {
+  position: absolute;
+  width: calc(var(--gw) * 1px);
+  height: calc(var(--gh) * 1px);
+}
+
+.vg {
+  display: var(--vg);
+
+}
+
+.hg {
+  display: var(--hg);
+}
+
+.gutter-top {
+  top: 0;
+}
+
+.gutter-right {
+  right: 0;
+}
+
+.gutter-bottom {
+  bottom: 0;
+}
+
+.gutter-left {
+  left: 0;
+}
+
+/* Main Scrolling Container */
+#msc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+/* Viewport Div */
+.vp {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start;
+  /* This allows us to use rows properly as otherwise
+  these divs will shrink down. */
+  flex: none;
+}
+
+.ur {
+  position: relative;
+  width: calc(var(--w) * 1px);
+  height: calc(var(--h) * 1px);
+}
+
+.abs {
+  position: absolute;
+}
+
+.desktop {
+  display: none;
+}
+
+/* CONTENT ///////////////////////////////////////////////// */
+/* ANIMATIONS ------------------------------------------------ */
+@keyframes fade-in {from{opacity:0;}to{opacity:1;}}
+@keyframes scale-v-breath {
+  0% {transform: scaleY(0);}
+  50% {transform: scaleY(1);}
+  100% {transform: scaleY(0);}
+}
+
+
+/* FIXED-LAYER ---------------------------------------------------- */
+#fixed-layer {
+  background-color: hsl(220, 100%, 10%);
+  animation: fade-in 2s ease-in forwards;
+}
+
+#fixed-layer .ur {
+  background-color: hsl(220, 100%, 15%);
+  opacity: 0;
+  animation: fade-in 2s 1s ease-in forwards;
+}
+
+.f-rec {
+  width: 100%;
+}
+
+#f-rec1 {
+  background-color: hsl(220, 100%, 20%);
+  height: 80%;
+  top: 10%;
+  opacity: 0;
+  animation: fade-in 2s 2s ease-in forwards;
+}
+
+#f-rec2 {
+  background-color: hsl(220, 100%, 25%);
+  height: 50%;
+  top: 25%;
+  opacity: 0;
+  animation: fade-in 2s 3s ease-in forwards;
+}
+
+/* HEADER --------------------------------------------------- */
+h2 {
+  width: 100%;
+  font-family: "Geostar Fill", serif;
+  color: hsl(220, 100%, 15%);
+  font-size: calc(var(--wpx)/8);
+  text-align: center;
+  letter-spacing: calc(var(--wpx)/30);
+  top: 38%;
+  line-height: 1.5;
+  padding: 3% 0% 3% 2%;
+  background-color: hsl(0, 100%, 50%);
+  opacity: 0;
+  animation: fade-in 2s 4s ease-in forwards;
+}
+
+/* RECTANGLE ANIMATION ----------------------------------- */
+.rec {
+  width: 31%;
+  height: 13%;
+  animation: scale-v-breath 10s ease-in-out infinite;
+}
+
+.top-rec {
+  top: 25%;
+  transform-origin: 50% 100%;
+}
+
+.bottom-rec {
+  top: 62%;
+  transform-origin: 50% 0%;
+}
+
+#p1-rec1, #p1-rec6 {
+  background-color: hsla(0, 100%, 50%, 1);
+}
+
+#p1-rec2, #p1-rec7 {
+  left: 17.25%;
+  animation-delay: 1s;
+  background-color: hsla(0, 100%, 55%, 1);
+}
+#p1-rec3, #p1-rec8 {
+  left: 34.5%;
+  animation-delay: 2s;
+  background-color: hsla(0, 100%, 60%, 1);
+}
+#p1-rec4, #p1-rec9 {
+  left: 51.75%;
+  animation-delay: 3s;
+  background-color: hsla(0, 100%, 65%, 1);
+}
+#p1-rec5, #p1-rec10 {
+  left: 69%;
+  animation-delay: 4s;
+  background-color: hsla(0, 100%, 70%, 1);
+}
+
+/* NAVIGATION ------------------------------------------------ */
+.home-link {
+  color: hsl(220, 100%, 10%);
+  border: calc(var(--wpx)/200) solid hsl(220, 100%, 10%);
+  background-color: red;
+  font-size: calc(var(--wpx)/17);  
+  width: 25%;
+  height: 9%;
+  padding-top: 9%;
+  font-family: "Bellota Text", serif;
+}
+
+.home-link:hover, .home-link:focus {
+  color: white;
+  border-color: white;
+  background-color: black;
+}
+
+.home-link svg {
+  top: 0%;
+  left: 0%;
+}
+
+.home-link:hover path, .home-link:focus path {
+  fill: white;
+}
+
+header .home-link {
+  left: 72%;
+  top: 5%;
+  opacity: 0;
+  animation: fade-in 2s 6s ease-in forwards;
+}
+
+footer .home-link {
+  left: 38%;
+  top: 45%;
+}
+
+.arrow-link {
+  color: hsl(220, 100%, 10%);
+  font-size: calc(var(--wpx)/13);
+  border: calc(var(--wpx)/50) solid hsl(220, 100%, 10%);
+  border-radius: calc(var(--wpx)/30);
+  background-color: red;
+  padding: 1% 2%;
+  line-height: 1;
+  left: 42.2%;
+  top: 91%;
+  width: 15%;
+  height: 7.5%;
+  transition-property: background-color, border-radius;
+  transition-duration: 2s, 0.5s;
+  transition-timing-function: ease-in;
+}
+
+.arrow-link:hover, .arrow-link:focus, #page2 .arrow-link:hover,
+#page2 .arrow-link:focus {
+  border-radius: 0;
+  background-color: hsl(50, 100%, 70%);
+}
+
+.arrow-link svg {
+  top: 0%;
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+
+header .arrow-link {
+  opacity: 0;
+  animation: fade-in 2s 5s ease-in forwards;
+}
+
+#page2 .arrow-link {
+  background-color: magenta;
+}
+
+/* LANDSCAPE ////////////////////////////////////////// */
+@media only screen and (orientation: landscape) {
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
+  /* HEADER 2 ------------------------------------------- */
+  h2 {
+    font-size: calc(var(--wpx)/20);
+    top: 39%;
+    letter-spacing: calc(var(--wpx)/50);
+  }
+
+  .top-rec {
+    top: 26.1%;
+  }
+
+  .bottom-rec {
+    top: 60.5%;
+  }
+
+  /* NAVIGATION --------------------------------------------- */
+  .home-link {
+    font-size: calc(var(--wpx)/30);
+    padding-top: 4.5%;
+    width: 13%;
+    height: 15%;
+  }
+
+  .home-link:hover, .home-link:focus {
+    color: white;
+    border-color: white;
+    background-color: black;
+  }
+
+  .home-link span {
+    font-size: calc(var(--wpx)/11);
+    left: 39%;
+    top: -25%;
+  }
+
+  header .home-link {
+    left: 85%;
+    top: 3%;
+  }
+
+  .arrow-link {
+    font-size: calc(var(--wpx)/25);
+    top: 85%;
+    border-width: calc(var(--wpx)/100);
+    border-radius: calc(var(--wpx)/60);
+    padding: 0.5% 1%;
+    left: 44%;
+    transition-property: background-color, border-radius;
+    transition-duration: 2s, 0.5s;
+    transition-timing-function: ease-in;
+    height: 10%;
+  }
+
+  .arrow-link:hover, .arrow-link:focus, #page2 .arrow-link:hover,
+  #page2 .arrow-link:focus {
+    border-radius: 0;
+    background-color: hsl(50, 100%, 70%);
+  }
+}
