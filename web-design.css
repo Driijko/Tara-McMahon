@@ -174,13 +174,13 @@ body {
 /* FIXED-LAYER ---------------------------------------------------- */
 #fixed-layer {
   background-color: hsl(220, 100%, 10%);
-  /* animation: fade-in 2s ease-in forwards; */
+  animation: fade-in 2s ease-in forwards;
 }
 
 #fixed-layer .ur {
   background-color: hsl(220, 100%, 15%);
-  /* opacity: 0; */
-  /* animation: fade-in 2s 1s ease-in forwards; */
+  opacity: 0;
+  animation: fade-in 2s 1s ease-in forwards;
 }
 
 .f-rec {
@@ -191,16 +191,16 @@ body {
   background-color: hsl(220, 100%, 20%);
   height: 80%;
   top: 10%;
-  /* opacity: 0;
-  animation: fade-in 2s 2s ease-in forwards; */
+  opacity: 0;
+  animation: fade-in 2s 2s ease-in forwards;
 }
 
 #f-rec2 {
   background-color: hsl(220, 100%, 25%);
   height: 50%;
   top: 25%;
-  /* opacity: 0;
-  animation: fade-in 2s 3s ease-in forwards; */
+  opacity: 0;
+  animation: fade-in 2s 3s ease-in forwards;
 }
 
 /* HEADER --------------------------------------------------- */
@@ -356,7 +356,6 @@ header .arrow-link {
 
 p {
   font-size: calc(var(--wpx)/22);
-  /* color: magenta; */
   color: hsl(300, 100%, 50%);
   font-family: "Montserrat", sans-serif;
   padding-left: 8%;
