@@ -345,7 +345,6 @@ nav a:hover, nav a:focus {
 /* PARAGRAPHS ----------------------------------------------- */
 p {
   color: hsl(50, 100%, 95%);
-  font-family: "Josefin Slab", sans-serif;
   font-weight: 300;
   letter-spacing: calc(var(--wpx)/200);
   line-height: 1.4;
@@ -354,6 +353,7 @@ p {
 
 #p1, #p2 {
   font-size: calc(var(--wpx)/16);
+  font-family: "Josefin Slab", sans-serif;
 }
 
 #p1 {
@@ -391,13 +391,13 @@ p {
 
 #leaf2 {
   color: hsl(50, 100%, 95%);
-  font-family: "Josefin Slab", sans-serif;
   font-size: calc(var(--wpx)/30);
 }
 
 .ur {
   background-color: hsla(0, 0%, 0%, 0.5)
 }
+
 img {
   width:45%;
   object-fit: contain;
@@ -405,14 +405,17 @@ img {
 
 #name {
   left: 47%;
-  top: 3%;
+  top: 10%;
   font-size: calc(var(--wpx)/16);
+  font-family: "Josefin Slab", sans-serif;
+
 }
 
 #title {
   left: 48%;
-  top: 10%;
-  font-size: calc(var(--wpx)/28)
+  top: 15%;
+  font-size: calc(var(--wpx)/28);
+  font-family: "Josefin Slab", sans-serif;
 }
 
 #contact-section, #finance-section, #qualifications-section {
@@ -420,7 +423,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: calc(var(--wpx)/22);
+  font-size: calc(var(--wpx)/30);
+  font-family: "Montserrat", sans-serif;
 }
 
 em {
@@ -428,8 +432,10 @@ em {
 }
 
 #contact-section {
-  top: 31%;
+  top: 31.5%;
   height: 20%;
+  font-size: calc(var(--wpx)/24);
+  font-family: "Josefin Slab", sans-serif;
 }
 
 #finance-section {
@@ -448,18 +454,18 @@ em {
 
 @media only screen and (orientation: landscape) {
   @media only screen and (max-width: 600px) {
-    #vp-bkg {
+    #fixed-layer {
       background-image: url("./assets/backgrounds/contact-bkg3-small.jpg");
     } 
   }
   @media only screen and (min-width: 601px) and (max-width:1920px) {
-    #vp-bkg {
-      background-image: url("./assets/backgrounds/contact-bkg-medium.jpg");
+    #fixed-layer {
+      background-image: url("./assets/backgrounds/contact-bkg3-medium.jpg");
     } 
   }
   
   @media only screen and (min-width: 1921px) { 
-    #vp-bkg {
+    #fixed-layer {
       background-image: url("./assets/backgrounds/contact-bkg3-large.jpg");
     } 
   }
@@ -513,9 +519,12 @@ em {
 
   /* PARAGRAPHS --------------------------------------------------- */
   p {
-    font-size: calc(var(--wpx)/35);
     line-height: 1.5;
     letter-spacing: calc(var(--wpx)/700);
+  }
+
+  #p1, #p2 {
+    font-size: calc(var(--wpx)/35);
   }
 
   #p1 {
@@ -524,5 +533,60 @@ em {
 
   #p2 {
     top: 55%;
+  }
+
+  /* LEAF 2 ////////////////////////////////////////////// */
+  img {
+    width: 30%;
+  }
+  
+  #name {
+    left: 32%;
+    font-size: calc(var(--wpx)/20);
+  }
+  
+  #title {
+    left: 33%;
+    top: 13%;
+    font-size: calc(var(--wpx)/35)
+  }
+  
+  #contact-section {
+    font-size: calc(var(--wpx)/40);
+  }
+  
+  
+  #contact-section {
+    padding-left: 3%;
+    top: 28%;
+    height: 32%;
+    width: 70%;
+    left: 30%;
+  }
+
+  #finance-section, #qualifications-section {
+    font-size: calc(var(--wpx)/55);
+    padding-left: 2%;
+    letter-spacing: calc(var(--wpx)/2000);
+  }
+  #finance-section {
+    padding-top: 2%;
+    border: none;
+    border-top: calc(var(--wpx)/1000) solid white;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    top: 60%;
+    height: 15%;
+    left: 0%;
+  }
+
+  #finance-section p {
+    padding-right: 5%;
+  }
+  
+  #qualifications-section {
+    top: 75%;
+    height: 25%;
   }
 }
