@@ -118,6 +118,10 @@ body {
   position: absolute;
 }
 
+.desktop {
+  display: none;
+}
+
 /* CONTENT ///////////////////////////////////////////////// */
 .vp {
   background-image: linear-gradient(
@@ -127,14 +131,43 @@ body {
 }
 
 .gutter-top {
-  background-color: hsla(0, 0%, 0%, 0.8);
+  /* background-color: hsla(0, 0%, 0%, 0.8); */
+  background-image: linear-gradient(
+    hsl(150, 100%, 0%),
+    hsl(150, 100%, 15%)
+  );
 }
+
 /* BACKGROUNDS ------------------------------------------------ */
 #header-background {
   width: 100%;
   height: 100%;
   background-size: 100%;
-  background-image: url("./assets/backgrounds/resources-header-bkg.jpg");
+}
+
+@media only screen and (max-width:600px) {
+  #header-background {
+    background-image: url("./assets/backgrounds/resources-header-bkg-small.jpg");
+  } 
+  #main-background {
+    background-image: url("./assets/backgrounds/resources-bkg1-small.jpg");
+  } 
+}
+@media only screen and (min-width:601px) and (max-width: 1920px) {
+  #header-background {
+    background-image: url("./assets/backgrounds/resources-header-bkg-medium.jpg");
+  } 
+  #main-background {
+    background-image: url("./assets/backgrounds/resources-bkg1-medium.jpg");
+  } 
+}
+@media only screen and (min-width:1921px) {
+  #header-background {
+    background-image: url("./assets/backgrounds/resources-header-bkg-large.jpg");
+  } 
+  #main-background {
+    background-image: url("./assets/backgrounds/resources-bkg1-large.jpg");
+  } 
 }
 
 /* SITE HEADER ---------------------------------------------- */
@@ -237,7 +270,6 @@ main {
 #main-background {
   width: 100%;
   height: 100%;
-  background-image: url("./assets/backgrounds/resources-bkg1.jpg");
   background-size: 100%;
   filter: brightness(40%);
 }
@@ -261,7 +293,7 @@ main {
 
 #hotline-list-section {
   background-color: hsla(150, 100%, 0%, 0.3);
-  top: 20%;
+  top: 21%;
   width: 100%;
   height: 65%;
   border-top: calc(var(--wpx)/300) solid hsl(50, 100%, 85%);
@@ -319,11 +351,108 @@ main {
 }
 
 .organization {
-  color: hsl(50, 100%, 85%);
-  font-size: calc(var(--wpx)/20);
   line-height: 1.5;
 }
 
 .phone-number, .tty {
   text-align: right;
+}
+
+/* LANDSCAPE ////////////////////////////////////////////// */
+@media only screen and (orientation: landscape) {
+
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: initial;
+  }
+
+  /* HEADER ----------------------------------------- */
+  #home-link {
+    background-size: 29%;
+    background-position: 0% 50%;
+  }
+  #home-link:focus, #home-link:hover {
+    background-size: 40%;
+  }
+
+  /* NAVIGATION MENU ------------------------------ */
+  nav {
+    width: 60%;
+    left: 40%;
+    border-left-width: calc(var(--wpx)/100);
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    left: -0.1%;
+  }
+
+  #li1, #li2 {
+    height: 100%;
+  }
+
+  nav a {
+    height: 100%;
+    font-size: calc(var(--wpx)/40);
+  }
+
+  /* MAIN --------------------------------------------- */
+  #main-background {
+    filter: brightness(30%);
+  }
+  
+  #p1, #p2 {
+    font-size: calc(var(--wpx)/45);
+    width: 40%;
+  }
+  
+  #p1 {
+    top: 20%;
+  }
+  
+  #p2 {
+    top: 65%;
+  }
+
+  /* HOTLINE LIST SECTION ---------------------------------- */
+  #hotline-list-section {
+    top: 5%;
+    left: 48%;
+    width: 50%;
+    height: 90%;
+    border: none;
+  }
+  
+  #overlay {
+    top: 4%;
+    height: 92%;
+  }
+  
+  .arrow-icon {
+    height: 4%;
+    background-color: transparent;
+  }
+  
+  #up-arrow-icon {
+    border-width: calc(var(--wpx)/500);
+  }
+  
+  #down-arrow-icon {
+    border-width: calc(var(--wpx)/500);
+  }
+  
+  #hotline-list {
+    top: 4%;
+    height: 92%;
+  }
+  
+  #hotline-list li {
+    height: 70%;
+    font-size: calc(var(--wpx)/40);
+  }
+
 }
