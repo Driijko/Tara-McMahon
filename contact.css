@@ -77,6 +77,15 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
+#fixed-layer {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .gutter {
   position: absolute;
   width: calc(var(--gw) * 1px);
@@ -106,6 +115,17 @@ body {
 
 .gutter-left {
   left: 0;
+}
+
+#msc {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 
 .vp {
@@ -155,13 +175,12 @@ body {
 @keyframes fade-in {from{opacity: 0;} to{opacity:1;}}
 
 /* BACKGROUNDS ---------------------------------------------- */
-#vp-bkg {
-  width: 100%;
-  height: 100%;
-  position: absolute;
+
+#fixed-layer {
   background-size: cover;
-  opacity: 0;
-  animation: dim1 10s ease-out forwards;
+  filter: hue-rotate(40deg) brightness(50%);
+  /* opacity: 0;
+  animation: dim1 10s ease-out forwards; */
 }
 
 #header-background {
@@ -176,8 +195,8 @@ main {
   top: 25%;
   height: 75%;
   background-size: 67%;
-  opacity: 0; 
-  animation: fade-in 3s 2s ease-in forwards;
+  /* opacity: 0; 
+  animation: fade-in 3s 2s ease-in forwards; */
 }
 
 #background1 {
@@ -188,7 +207,7 @@ main {
   background-position: 100% 100%;
 }
 @media only screen and (max-width: 600px) {
-  #vp-bkg {
+  #fixed-layer {
     background-image: url("./assets/backgrounds/contact-bkg2-small.jpg");
   }
   
@@ -205,7 +224,7 @@ main {
   }   
 }
 @media only screen and (min-width: 601px) and (max-width:1920px) {
-  #vp-bkg {
+  #fixed-layer {
     background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
   }
   
@@ -226,9 +245,9 @@ main {
   #header-background {
     background-image: url("./assets/backgrounds/contact-header-bkg-large.jpg");
   }
-  #vp-bkg {
-    background-image: url("./assets/backgrounds/contact-bkg2-medium.jpg");
-  } 
+  #fixed-layer {
+    background-image: url("./assets/backgrounds/contact-bkg2-large.jpg");
+  }
   main {
     background-image: url("assets/backgrounds/contact-bkg1-large.jpg");
   }
@@ -237,29 +256,12 @@ main {
   }  
 }
 
-
-/* GUTTERS ----------------------------------------------- */
-.gutter-left {
-  background-image: url("./assets/backgrounds/my-practice-bkg2.jpg");
-  background-size: 200%;
-  /* animation: fade-in 3s ease-in forwards; */
-}
-
-.gutter-right {
-  background-color: hsl(20, 100%, 4%);
-  /* animation: fade-in 3s ease-in forwards; */
-}
-
-/* #gutter1, #gutter2 {
-  opacity: 0;
-} */
-
 /* SITE HEADER -------------------------------------------- */
 header {
   width: 100%;
   height: 25%;
-  opacity: 0;
-  animation: fade-in 3s 2s ease-in forwards;
+  /* opacity: 0;
+  animation: fade-in 3s 2s ease-in forwards; */
 }
 
 #home-link {
@@ -343,25 +345,106 @@ nav a:hover, nav a:focus {
 /* PARAGRAPHS ----------------------------------------------- */
 p {
   color: hsl(50, 100%, 95%);
-  font-size: calc(var(--wpx)/16);
   font-family: "Josefin Slab", sans-serif;
   font-weight: 300;
   letter-spacing: calc(var(--wpx)/200);
   line-height: 1.4;
-  opacity:0;
+  /* opacity:0; */
+}
+
+#p1, #p2 {
+  font-size: calc(var(--wpx)/16);
 }
 
 #p1 {
   left: 8%;
   top: 15%;
-  animation: fade-in 2s 5s ease-in forwards;
+  /* animation: fade-in 2s 5s ease-in forwards; */
 }
 
 #p2 {
-  top: 50%;
+  top: 46%;
   left: 8%;
-  animation: fade-in 2s 7s ease-in forwards;
+  /* animation: fade-in 2s 7s ease-in forwards; */
 }
+
+#page-down-link {
+  position: absolute;
+  top: 85%;
+  color: hsl(50, 100%, 95%);
+  font-family: "Josefin Slab", sans-serif;
+  font-size: calc(var(--wpx)/16);
+  left: 33%;
+  height: 12%;
+}
+
+#page-down-link svg {
+  position: absolute;
+  height: 60%;
+  width: 100%;
+}
+
+/* LEAF 2 ///////////////////////////////////////////////////// */
+#leaf1 {
+  display: none;
+}
+
+#leaf2 {
+  color: hsl(50, 100%, 95%);
+  font-family: "Josefin Slab", sans-serif;
+  font-size: calc(var(--wpx)/30);
+}
+
+.ur {
+  background-color: hsla(0, 0%, 0%, 0.5)
+}
+img {
+  width:45%;
+  object-fit: contain;
+}
+
+#name {
+  left: 47%;
+  top: 3%;
+  font-size: calc(var(--wpx)/16);
+}
+
+#title {
+  left: 48%;
+  top: 10%;
+  font-size: calc(var(--wpx)/28)
+}
+
+#contact-section, #finance-section, #qualifications-section {
+  padding-left: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-size: calc(var(--wpx)/22);
+}
+
+em {
+  font-weight: bold;
+}
+
+#contact-section {
+  top: 31%;
+  height: 20%;
+}
+
+#finance-section {
+  border-top: calc(var(--wpx)/400) solid white;
+  border-bottom: calc(var(--wpx)/400) solid white;
+  top: 51%;
+  height: 20%;
+}
+
+#qualifications-section {
+  top: 70%;
+  height: 30%;
+}
+
+/* LANDSCAPE /////////////////////////////////////////////////// */
 
 @media only screen and (orientation: landscape) {
   @media only screen and (max-width: 600px) {

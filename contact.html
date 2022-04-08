@@ -35,54 +35,111 @@
   <link href="https://fonts.googleapis.com/css2?family=Bellota+Text&family=Josefin+Slab:wght@300;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <div class="vp">
-    <div id="vp-bkg"></div>
 
-    <!-- GUTTERS --------------------------------------------- -->
-    <!-- <div class="gutter vg gutter-top"></div>
-    <div class="gutter hg gutter-right"></div>
-    <div class="gutter vg gutter-bottom"></div>
-    <div class="gutter hg gutter-left"></div> -->
+  <div id="fixed-layer"></div>
 
-    <div class="ur">
+  <div id="msc">
 
-      <!-- HEADER ------------------------------------------------ -->
-      <header class="abs">
+    <!-- LEAF 1 ----------------------------------------------- -->
+    <div id="leaf1" class="vp">
+      <div class="ur">
+  
+        <!-- HEADER ------------------------------------------------ -->
+        <header class="abs">
+  
+          <div id="header-background" class="abs"></div>
+          <div id="rec1" class="abs"></div>
+          <a id="home-link" class="abs" href="./home.html"><h1 ></h1></a> 
+  
+          <!-- NAVIGATION MENU ---- -->
+          <nav class="abs">
+            <ul class="abs">
+              <li id="li1">
+                <a href="./my-practice.html">My<br/> Practice</a>
+              </li>
+              <li id="li2">
+                <a href="./resources.html">Resources</a>
+              </li>
+            </ul>
+          </nav>
+  
+        </header>
+  
+        <!-- MAIN --------------------------------------------------- -->
+        <main class="abs">
+          <div id="background1" class="abs"></div>
+  
+          <p id="p1" class="abs">
+            Available for<br class="mobile"/> in-person and online<br class="mobile"/> sessions.
+          </p>
+  
+          <p id="p2" class="abs">
+            If you are interested<br class="mobile"/> in booking a consultation, <br/>please email me at tara.mcmahon@gmail.com
+          </p>
 
-        <div id="header-background" class="abs"></div>
-        <div id="rec1" class="abs"></div>
-        <a id="home-link" class="abs" href="./home.html"><h1 ></h1></a> 
-
-        <!-- NAVIGATION MENU ---- -->
-        <nav class="abs">
-          <ul class="abs">
-            <li id="li1">
-              <a href="./my-practice.html">My<br/> Practice</a>
-            </li>
-            <li id="li2">
-              <a href="./resources.html">Resources</a>
-            </li>
-          </ul>
-        </nav>
-
-      </header>
-
-      <!-- MAIN --------------------------------------------------- -->
-      <main class="abs">
-        <div id="background1" class="abs"></div>
-
-        <p id="p1" class="abs">
-          Available for<br class="mobile"/> in-person and online<br class="mobile"/> sessions.
-        </p>
-
-        <p id="p2" class="abs">
-          If you are interested<br class="mobile"/> in booking a consultation, <br/>please email me at tara.mcmahon@gmail.com
-        </p>
-
-      </main>
-
+          <a id="page-down-link" href="#leaf2">
+            Learn more<br/>
+            <svg viewbox="0 0 216 70">
+              <path stroke="hsl(50, 100%, 95%)" fill="transparent"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                d=" M 68,20 
+                L 108,50
+                L 148,20
+              "/>
+            </svg>
+          </a>
+  
+        </main>
+  
+      </div>
     </div>
 
+    <!-- LEAF 2 ---------------------------------------------- -->
+    <div id="leaf2" class="vp">
+      <div class="ur">
+        <img src="./assets/images/small-profile.jpeg" alt="Picture of therapist and social worker Tara McMahon." class="abs"/>
+        <p id="name" class="abs" >Tara McMahon</p>
+        <p id="title" class="abs" >Registered Social Worker, MSW, RSW</p>
+        <section id="contact-section" class="abs" >
+          <p id="message">
+            You can call or email me<br/> for a <em>free</em> 15 minute consultation.
+          </p>
+          <p>
+            <em>Email:</em> tara.mcmahon@gmail.com
+          </p>
+          <p>
+            <em>Phone:</em> (647) 361-0314
+          </p>
+        </section>
+  
+        <section id="finance-section" class="abs" >
+          <p>
+            <em>Cost per Session:</em> $110 - $150
+          </p>
+          <p>
+            <em>Sliding Scale:</em> yes
+          </p>
+          <p>
+            <em>Pay By:</em> ACH Bank transfer, Cash, Cheque, Paypal
+          </p>
+        </section>
+  
+        <section id="qualifications-section" class="abs">
+          <p>
+            <em>Membership:</em> Ontario College of Social Workers & Social Service Workers
+          </p>
+          <p>
+            <em>School:</em> Master in Social Work, University of Toronto
+          </p>
+          <p>
+            <em>Certificate:</em> Ontario Association of Social Workers
+          </p>
+        </section>
+  
+      </div>
+
+    </div>
   </div>
+
 </body>
 </html>

@@ -142,6 +142,32 @@ body {
   position: absolute;
 }
 
+.centered-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+.inline-link {
+  display: inline;
+  text-decoration: underline;
+  color: hsl(0, 100%, 30%);
+  font-weight: bold;
+  padding: 1%;
+}
+
+.inline-link:focus-visible {
+  color: hsl(0, 100%, 60%);
+  background-color: black;
+}
+@media (hover:hover) {
+  .inline-link:hover {
+    color: hsl(0, 100%, 60%);
+    background-color: black;
+  }
+}
+
 /* CONTENT ///////////////////////////////////////////////////////// */
 /* LEAF 1: HEADER ///////////////////////////////////////////////// */
 /* BACKGROUNDS ------------------------------------------------------- */
@@ -491,6 +517,13 @@ p, #leaf2 h2 {
   text-align: center;
 }
 
+article img {
+  width: 100%;
+  object-fit: contain;
+  height: 50%;
+  margin-top: 10%;
+}
+
 /* LANDSCAPE LAYOUT //////////////////////////////////////////////// */
 @media only screen and (orientation: landscape) {
   /* LEAF 1: HEADER ////////////////////////////////////// */
@@ -562,14 +595,14 @@ p, #leaf2 h2 {
     font-size: calc(var(--wpx)/12);
     top: 46%;
     left: 25%;
-    animation: fade-in 5s 7s ease-in forwards;
+    animation: fade-in 3s 7s ease-in forwards;
   }
 
   /* LINES ------------------------------------------------ */
   #l1-line1, #l1-line2 {
     background-color: hsla(0, 100%, 50%, 0.4);
     height: 30%;
-    animation: scale-h 8s 5s ease-in-out forwards;
+    animation: scale-h 5s 5s ease-in-out forwards;
   }
 
   #l1-line1 {
@@ -588,7 +621,7 @@ p, #leaf2 h2 {
     top: 82%;
     width: 6%;
     height: 8%;
-    animation: fade-in 2s 13s ease-in forwards;
+    animation: fade-in 2s 9s ease-in forwards;
   }
 
   .internal-page-link:focus-visible {
@@ -637,6 +670,11 @@ p, #leaf2 h2 {
   
   p, #leaf2 h2 {
     border-radius: calc(var(--wpx)/50);
+  }
+
+  article img {
+    height: 50%;
+    margin-top: 0%;
   }
 
 }
