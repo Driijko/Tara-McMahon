@@ -357,14 +357,16 @@ p {
 }
 
 #p1 {
-  left: 8%;
+  width: 100%;
+  text-align: center;
   top: 15%;
   animation: fade-in 2s 5s ease-in forwards;
 }
 
 #p2 {
   top: 46%;
-  left: 8%;
+  width: 100%;
+  text-align: center;
   animation: fade-in 2s 7s ease-in forwards;
 }
 
@@ -374,7 +376,7 @@ p {
   color: hsl(50, 100%, 95%);
   font-family: "Josefin Slab", sans-serif;
   font-size: calc(var(--wpx)/16);
-  left: 33%;
+  left: 38%;
   height: 12%;
   opacity: 0;
   animation: fade-in 2s 9s ease-in forwards;
@@ -399,7 +401,6 @@ p {
 }
 
 /* LEAF 2 ///////////////////////////////////////////////////// */
-
 #leaf2 {
   color: hsl(50, 100%, 95%);
   font-size: calc(var(--wpx)/30);
@@ -410,22 +411,22 @@ p {
 }
 
 img {
-  width:45%;
+  width:40%;
   object-fit: contain;
 }
 
 #name {
-  left: 47%;
+  left: 42%;
   top: 10%;
-  font-size: calc(var(--wpx)/16);
+  font-size: calc(var(--wpx)/13);
   font-family: "Josefin Slab", sans-serif;
 
 }
 
 #title {
-  left: 48%;
+  left: 43%;
   top: 15%;
-  font-size: calc(var(--wpx)/28);
+  font-size: calc(var(--wpx)/24);
   font-family: "Josefin Slab", sans-serif;
 }
 
@@ -434,7 +435,6 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  font-size: calc(var(--wpx)/30);
   font-family: "Montserrat", sans-serif;
 }
 
@@ -443,17 +443,17 @@ em {
 }
 
 #contact-section {
-  top: 31.5%;
+  top: 27%;
   height: 20%;
   font-size: calc(var(--wpx)/24);
-  font-family: "Josefin Slab", sans-serif;
 }
 
 #finance-section {
   border-top: calc(var(--wpx)/400) solid white;
   border-bottom: calc(var(--wpx)/400) solid white;
-  top: 51%;
-  height: 20%;
+  top: 46%;
+  height: 26%;
+  font-size: calc(var(--wpx)/25);
 }
 
 #qualifications-section {
@@ -579,6 +579,7 @@ em {
     height: 32%;
     width: 70%;
     left: 30%;
+    font-family: "Josefin Slab", sans-serif;
   }
 
   #finance-section, #qualifications-section {
@@ -586,15 +587,16 @@ em {
     padding-left: 2%;
     letter-spacing: calc(var(--wpx)/2000);
   }
+
   #finance-section {
     padding-top: 2%;
     border: none;
-    border-top: calc(var(--wpx)/1000) solid white;
+    border-top: calc(var(--wpx)/50) solid hsla(50, 100%, 20%, 0.3);
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
     top: 60%;
-    height: 15%;
+    height: 17%;
     left: 0%;
   }
 
@@ -603,7 +605,7 @@ em {
   }
   
   #qualifications-section {
-    top: 75%;
-    height: 25%;
+    top: 79%;
+    height: 18%;
   }
 }
