@@ -399,11 +399,12 @@ nav a:hover, nav a:focus {
 /* BACKGROUNDS ---------------------------------------- */
 
 #leaf2 {
-  background-image: url("./assets/backgrounds/my-practice-bkg2-small.jpg");
+  /* background-image: url("./assets/backgrounds/my-practice-bkg2-small.jpg"); */
+  background-image: url("./assets/backgrounds/my-practice-bkg3.jpg");
   background-size: cover;
   position: relative;
 }
-@media only screen and (min-width:601px) and (max-width:1920px) {
+/* @media only screen and (min-width:601px) and (max-width:1920px) {
   #leaf2 {
     background-image: url("./assets/backgrounds/my-practice-bkg2-medium.jpg");
   }
@@ -412,23 +413,26 @@ nav a:hover, nav a:focus {
   #leaf2 {
     background-image: url("./assets/backgrounds/my-practice-bkg2-large.jpg");
   }
-}
+} */
 
 /* GUTTERS --------------------------------------------------- */
 .gutter svg {
+  /* display: none; */
   width: 100%;
   height: 100%;
 }
 
+.gutter1, .gutter3 {
+  background-color: hsla(220, 100%, 10%, 0.5);
+}
+
 .gutter1 {
-  border-bottom: calc(var(--wpx)/50) solid hsl(0, 100%, 55%);
-  background-color: hsl(0, 100%, 30%);
+  border-bottom: calc(var(--wpx)/50) solid hsl(220, 100%, 20%);
 
 }
 
 .gutter3 {
-  border-top: calc(var(--wpx)/50) solid hsl(0, 100%, 55%);
-  background-color: hsl(0, 100%, 30%);
+  border-top: calc(var(--wpx)/50) solid hsl(220, 100%, 20%);
 }
 
 /* INTERNAL PAGE LINK ------------------------------------------- */
@@ -637,20 +641,7 @@ article img {
 
   /* LEAF 2 //////////////////////////////////////////////////// */
   /* GUTTERS ----------------------------------------------- */
-  .gutter2, .gutter4 {
-    background-color: hsla(220, 100%, 10%, 0.5);
-  }
-
-  .gutter2 {
-    border-left: calc(var(--wpx)/200) solid hsl(0, 100%, 60%);
-  }
-
-  .gutter4 {
-    border-right: calc(var(--wpx)/200) solid hsl(0, 100%, 60%);
-  }
-
   .gutter1, .gutter3 {
-    background-color: hsla(220, 100%, 10%, 0.5);
     border-width: calc(var(--wpx)/200);
   }
 
